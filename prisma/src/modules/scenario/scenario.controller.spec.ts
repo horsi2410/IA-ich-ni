@@ -1,19 +1,21 @@
 /* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
+import { ScenarioController } from './scenario.controller';
 import { ScenarioService } from './scenario.service';
 
-describe('ScenarioService', () => {
-  let service: ScenarioService;
+describe('ScenarioController', () => {
+  let controller: ScenarioController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
+      controllers: [ScenarioController],
       providers: [ScenarioService],
     }).compile();
 
-    service = module.get<ScenarioService>(ScenarioService);
+    controller = module.get<ScenarioController>(ScenarioController);
   });
 
   it('should be defined', () => {
-    expect(service).toBeDefined();
+    expect(controller).toBeDefined();
   });
 });
