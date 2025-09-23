@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Injectable, Logger } from '@nestjs/common';
-import { ListScenarioRepository } from '../repository/listall-scenario.repository';
+import { ListScenarioRepository } from '../repository/list-scenario.repository';
 
 @Injectable()
 export class ListScenarioUseCase {
